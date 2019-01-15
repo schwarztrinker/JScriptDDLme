@@ -2,6 +2,7 @@ var array = [];
 var arrayPosition = 0;
 var links1fichier  = 0; 
 var linksShareOnline = 0; 
+var other = 0;
 
 for(var i = 0; i < 10000000; i++){
 	if(subcats[i] == undefined){
@@ -45,7 +46,7 @@ for(var i = 0; i < 10000000; i++){
 }
 console.log(links1fichier + " 1fichier links added");
 console.log(linksShareOnline + " Share-online links added");
-console.log(linksShareOnline + " other links added")
+console.log(other + " other links added")
 console.log(array);
 
 
