@@ -32,13 +32,29 @@ for(var i = 0; i < 10000000; i++){
 				catch(err){
 					//Try Uploadrocket
 					try{
-					array[arrayPosition] = subcats[i].links["Uploadrocket"]["0"][3];
+					array[arrayPosition] = subcats[i].links["Uptobox"]["0"][3];
 					arrayPosition++; 
 					other++;
 					}
 					catch(err){
-								console.log("no link found for S" + subcats[i].info["staffel"] + "E" + subcats[i].info["nr"] + ". Look for other links manually!");
+						//Try Uploadrocket
+						try{
+						array[arrayPosition] = subcats[i].links["Rapidgator"]["0"][3];
+						arrayPosition++; 
+						other++;
+						}
+						catch(err){
+							//Try Uploadrocket
+							try{
+							array[arrayPosition] = subcats[i].links["Uploadrocket"]["0"][3];
+							arrayPosition++; 
+							other++;
 							}
+							catch(err){
+										console.log("no link found for S" + subcats[i].info["staffel"] + "E" + subcats[i].info["nr"] + ". Look for other links manually!");
+							}	
+						}		
+					}
 				}
 			}
 		}
